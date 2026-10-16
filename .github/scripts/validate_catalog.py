@@ -48,9 +48,12 @@ FORBIDDEN = [
         r"\.azurewebsites\.net/internal|microsoft\.sharepoint)", re.I)),
 ]
 
+PROMISES = re.compile(
+    r"\b(guarantee[sd]?|SLAs?|service[- ]levels?|fully supported|officially supported|supported by|we support|"
+    r"enterprise[- ]grade|production[- ]ready|ready for production|safe for production|"
+    r"recommended for production|battle[- ]tested)\b", re.I)
+
 errors, warnings = [], []
-
-
 def rel(p):
     return Path(p).resolve().relative_to(ROOT).as_posix()
 
@@ -188,6 +191,9 @@ def check_entry(path, owners):
     for label, rx in FORBIDDEN:
         if rx.search(text):
             report("error", r, f"found {label}")
+
+    for m in PROMISES.finditer(body):
+        report("error", r, f"wording implies support or a guarantee: \"{m.group(0)}\"")
 
     todos = len(PLACEHOLDER.findall(text))
     if todos:

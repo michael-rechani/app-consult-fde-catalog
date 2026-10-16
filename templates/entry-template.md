@@ -18,7 +18,7 @@ last_reviewed: 2026-01-31             # YYYY-MM-DD. Update it every time the mai
 ## What it does
 
 <!-- One or two plain sentences. Say what the resource does, not what it could achieve.
-     Don't promise outcomes, SLAs or support. -->
+     Don't promise outcomes, SLAs or support. Don't write "supported", "guaranteed" or "ready for production". -->
 
 ## When to use it
 

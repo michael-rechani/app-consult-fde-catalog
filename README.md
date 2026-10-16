@@ -13,6 +13,9 @@
 
 </div>
 
+> [!IMPORTANT]
+> **This catalog is not a support commitment.** Nothing here is an official Microsoft product, service or offer, and Microsoft doesn't support, warrant or guarantee any listed resource. Resources are provided as is, under the terms in each resource's own repository. Review and test a resource yourself before you use it, and don't run one in a production environment until you've done so. You are responsible for how you use it.
+
 ## 🚀 About the program
 
 App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Alongside that hands-on work, the program maintains a set of reusable resources: health checks and WARA-style assessment scripts, FinOps tooling, AI accelerators, and monitoring and cost governance guidance.
@@ -68,7 +71,7 @@ Details for maturity, maintainer and link are added as each entry is confirmed.
 
 ## 🌱 Maturity levels
 
-Maturity describes how much real-world use a resource has had. It's not a support commitment.
+Maturity describes how much real-world use a resource has had, as judged by its maintainer. It's not a support commitment, and it doesn't mean a resource is suitable for your production environment. Even a "Production-ready" resource needs your own review and testing first.
 
 | Level | What it means |
 |---|---|
@@ -79,6 +82,7 @@ Maturity describes how much real-world use a resource has had. It's not a suppor
 ## 🚫 What this catalog doesn't do
 
 - It doesn't promise outcomes, service levels or support. Each resource is described as it is. Check the resource repository for its own terms.
+- It doesn't say a resource is safe or ready to run in production. That's your decision, after your own review and testing.
 - It doesn't hold code, scripts or customer data. Follow the links for those.
 
 ## 🤝 Contribute

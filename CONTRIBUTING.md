@@ -67,11 +67,12 @@ Pick the level that matches the evidence, not the level you hope to reach.
 - **Field-tested**: used on at least one real engagement. Known limits are written down. Users may need to adapt it.
 - **Production-ready**: used on several engagements and documented. The maintainer reviews it on a regular schedule.
 
-None of these levels is a support commitment.
+None of these levels is a support commitment, a warranty or a statement that the resource is suitable for production use.
 
 ## Content standards
 
 - Describe only what the resource does today. Don't promise outcomes, service levels or support.
+- Don't write that a resource is supported, guaranteed, enterprise-grade or safe or ready for production. The automated check rejects wording like this.
 - Use plain language. Write for someone who has never heard of the program. Avoid marketing wording, filler and internal jargon. Spell out an acronym the first time you use it.
 - Keep it short. Use the same headings as the template and don't add new ones.
 - Use present tense and active voice, and write sentences that stand on their own.
@@ -83,6 +84,7 @@ None of these levels is a support commitment.
 On every pull request, and weekly on `main`, a GitHub Actions workflow checks that:
 
 - each entry has all required fields and sections, and nothing that looks like a code block, a GUID, a secret or an internal host name;
+- entries don't use wording that implies support or a guarantee;
 - relative and external links resolve (a broken link fails the check; a site that can't be reached is a warning);
 - the summary table in the README matches the entries.
 
