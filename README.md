@@ -9,7 +9,7 @@
 ![Links](https://img.shields.io/badge/content-links%20only-107C10)
 ![Entries](https://img.shields.io/badge/entries-4-FFB900)
 
-[Browse](#-how-to-browse) · [Find the right resource](#-find-the-right-resource) · [All resources](#-all-resources) · [Maturity levels](#-maturity-levels) · [Contribute](#-contribute)
+[Browse](#-how-to-browse) · [Find the right resource](#-find-the-right-resource) · [All resources](#-all-resources) · [Contribute](#-contribute)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## 🚀 About the program
 
-App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Alongside that hands-on work, the program maintains a set of reusable resources: health checks and WARA-style assessment scripts, FinOps tooling, AI accelerators, and monitoring and cost governance guidance.
+App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Alongside that hands-on work, the program maintains a set of reusable resources: FinOps tooling, AI accelerators, and monitoring and cost governance guidance.
 
 Each resource lives in its own repository. This repository is a catalog. It has no code of its own. It describes each resource in the same way and links to where it lives, so you can see what is available and pick what fits.
 
@@ -36,7 +36,7 @@ Resources are grouped by what you are trying to do:
 
 | | Category | You want to | Examples |
 |---|---|---|---|
-| 🔍 | [**Assess**](catalog/assess/README.md) | Understand where a workload stands today | Health check, WARA-style scripts, FinOps |
+| 🔍 | [**Assess**](catalog/assess/README.md) | Understand where a workload stands today | FinOps |
 | 🛠️ | [**Build**](catalog/build/README.md) | Start building a solution | AI accelerators |
 | 📈 | [**Operate**](catalog/operate/README.md) | Run a solution that is already live | Monitoring, cost governance |
 
@@ -64,7 +64,6 @@ Not sure where you fit? Open an issue and describe your situation.
 | Name | Maturity | Maintainer | Link |
 |---|---|---|---|
 | [FinOps Multitool TUI](catalog/assess/finops-multitool-tui.md) | Prototype | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/FinOps-Multitool-TUI) |
-| [Health check](catalog/assess/health-check.md) | [TODO: confirm] | [TODO: confirm] | [TODO: confirm] |
 
 ### 🛠️ Build
 
@@ -84,16 +83,6 @@ Starting points for AI solutions on Azure, including those built on Microsoft Fo
 <!-- catalog-table:end -->
 
 Details for maturity, maintainer and link are added as each entry is confirmed.
-
-## 🌱 Maturity levels
-
-Maturity describes how much real-world use a resource has had, as judged by its maintainer. It's not a support commitment, and it doesn't mean a resource is suitable for your production environment. Even a "Production-ready" resource needs your own review and testing first.
-
-| Level | What it means |
-|---|---|
-| Prototype | Early work that shows an approach. Expect gaps and changes. It hasn't been used on a customer engagement. |
-| Field-tested | Used on at least one real engagement. Known limits are written down. You may need to adapt it to your environment. |
-| Production-ready | Used on several engagements and documented. The maintainer reviews it on a regular schedule. |
 
 ## 🚫 What this catalog doesn't do
 

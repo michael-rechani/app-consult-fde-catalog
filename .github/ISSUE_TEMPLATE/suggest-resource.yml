@@ -44,7 +44,7 @@ body:
     id: maturity
     attributes:
       label: Maturity
-      description: See the definitions in the README.
+      description: See the maturity definitions in CONTRIBUTING.md.
       options: [Prototype, Field-tested, Production-ready, Not sure]
     validations:
       required: true
