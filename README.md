@@ -18,7 +18,7 @@
 
 ## 🚀 About the program
 
-App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Alongside that hands-on work, the program maintains a set of reusable resources: health checks and WARA-style assessment scripts, FinOps tooling, AI accelerators, and monitoring and cost governance guidance.
+App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Alongside that hands-on work, the program maintains a set of reusable resources: health checks, FinOps tooling, AI accelerators, and monitoring and cost governance guidance.
 
 Each resource lives in its own repository. This repository is a catalog. It has no code of its own. It describes each resource in the same way and links to where it lives, so you can see what is available and pick what fits.
 
@@ -36,7 +36,7 @@ Resources are grouped by what you are trying to do:
 
 | | Category | You want to | Examples |
 |---|---|---|---|
-| 🔍 | [**Assess**](catalog/assess/README.md) | Understand where a workload stands today | Health check, WARA-style scripts, FinOps |
+| 🔍 | [**Assess**](catalog/assess/README.md) | Understand where a workload stands today | Health check, FinOps |
 | 🛠️ | [**Build**](catalog/build/README.md) | Start building a solution | AI accelerators |
 | 📈 | [**Operate**](catalog/operate/README.md) | Run a solution that is already live | Monitoring, cost governance |
 
