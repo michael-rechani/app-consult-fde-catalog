@@ -12,19 +12,19 @@ last_reviewed: "[TODO: confirm]"
 
 ## What it does
 
-Helps a team review its Azure spend and find places to reduce or better understand cost. [TODO: confirm what the tooling analyses, how it runs and what it produces.]
+Helps a team review its Azure spend, see where cost comes from and find places to reduce it.
 
 ## When to use it
 
-- **Scenario:** A team wants a clearer picture of where Azure cost comes from, or wants to review spend on an existing workload. [TODO: confirm typical scenarios.]
-- **What you get:** A view of current spend and a list of cost findings to review. [TODO: confirm output.]
+- **Scenario:** A team wants a clearer picture of where Azure cost comes from, or wants to review spend on an existing workload.
+- **What you get:** A view of current spend and a list of cost findings to review.
 
 ## Prerequisites
 
-- **Access:** [TODO: confirm, for example cost management read access on the scope to be reviewed.]
-- **Tooling:** [TODO: confirm.]
-- **Azure services:** [TODO: confirm.]
+- **Access:** Cost Management read access on the scope to be reviewed.
+- **Tooling:** Listed in the resource repository.
+- **Azure services:** Azure Cost Management.
 
 ## Limits
 
-- [TODO: confirm what the tooling doesn't cover. Ongoing cost governance guidance belongs in the Operate category.]
+- It reviews spend at a point in time. Ongoing cost governance guidance belongs in the Operate category.
