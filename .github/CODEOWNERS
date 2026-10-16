@@ -1,0 +1,17 @@
+# Each entry is owned by its maintainer. Add one line per entry, using the
+# maintainer_alias from the entry's front matter:
+#
+#   /catalog/<category>/<entry-name>.md @<github-handle>
+#
+# Until the program team confirms the maintainers, the seed entries have no
+# owner here. [TODO: confirm] Replace the commented lines below with real handles.
+#
+# /catalog/assess/health-check.md          @TODO-handle
+# /catalog/assess/finops.md                @TODO-handle
+# /catalog/build/ai-foundry-accelerators.md @TODO-handle
+
+# catalog structure, template, contributing guide and automation.
+# [TODO: confirm] Set this to the GitHub team or person that looks after the catalog.
+# /templates/  @TODO-handle
+# /.github/    @TODO-handle
+# /README.md   @TODO-handle

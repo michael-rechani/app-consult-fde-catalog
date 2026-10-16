@@ -1,0 +1,29 @@
+name: Report a problem with an entry
+description: An entry is wrong, out of date or has a broken link.
+title: "Entry: "
+labels: ["entry-fix"]
+body:
+  - type: markdown
+    attributes:
+      value: Don't include secrets, customer names, tenant or subscription IDs, or internal-only links.
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      description: The entry name or file path.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options: [Broken link, Out of date, Inaccurate description, Wrong maturity or maintainer, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should it say instead?
+    validations:
+      required: true

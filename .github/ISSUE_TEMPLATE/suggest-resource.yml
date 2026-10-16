@@ -1,0 +1,66 @@
+name: Suggest a new resource
+description: Propose a resource for the catalog.
+title: "Suggest: "
+labels: ["new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. This repo is links only, so don't paste code, customer data, secrets, customer names, tenant or subscription IDs, or internal-only links.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Assess = understand where a workload stands. Build = start building. Operate = run a live solution.
+      options: [Assess, Build, Operate, Not sure]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does
+      description: One or two plain sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: When to use it
+      description: A typical scenario, and what the team gets.
+    validations:
+      required: true
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Access, tooling and Azure services needed.
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Maturity
+      description: See the definitions in the README.
+      options: [Prototype, Field-tested, Production-ready, Not sure]
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link to the resource repository
+      description: A public link only.
+  - type: input
+    id: maintainer
+    attributes:
+      label: Maintainer (name and GitHub handle)
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: This issue has no secrets, customer names, tenant IDs or internal-only links.
+          required: true
