@@ -19,7 +19,7 @@ If you committed something by mistake, tell a maintainer straight away. Don't re
 1. Make sure the resource repository is ready to be linked and is accessible to the audience that will read this catalog.
 2. Copy [`templates/entry-template.md`](templates/entry-template.md) to `catalog/<category>/<entry-name>.md`.
    - `<category>` is `assess`, `build` or `operate`.
-   - `<entry-name>` is lowercase with hyphens, for example `health-check.md`.
+   - `<entry-name>` is lowercase with hyphens, for example `finops-multitool-tui.md`.
 3. Fill in every field and section. Delete the guidance comments when you are done.
 4. Add a line for the new file to [`.github/CODEOWNERS`](.github/CODEOWNERS), with the maintainer's GitHub handle.
 5. Run the check locally (optional):

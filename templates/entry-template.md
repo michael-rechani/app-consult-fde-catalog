@@ -5,7 +5,7 @@
 name: Entry name                      # The name people know the resource by.
 category: Assess                      # Assess, Build or Operate. Must match the folder.
 # group: AI Accelerators              # Optional. Uncomment to list this entry under a group. Must be a name in .github/catalog-groups.json.
-maturity: Prototype                   # Prototype, Field-tested or Production-ready. See the README for definitions.
+maturity: Prototype                   # Prototype, Field-tested or Production-ready. See the maturity definitions in CONTRIBUTING.md.
 maintainer_name: Full Name            # The person who keeps this entry current.
 maintainer_alias: alias               # Their GitHub handle, without the @. Must also be in .github/CODEOWNERS.
 repo_url: https://github.com/ORG/REPO # Public link to the resource repository. Links only, no internal URLs.
