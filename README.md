@@ -84,3 +84,13 @@ Maturity describes how much real-world use a resource has had. It's not a suppor
 ## 🤝 Contribute
 
 To add a resource, update an entry or suggest something new, see [CONTRIBUTING.md](CONTRIBUTING.md). The short version: copy [the template](templates/entry-template.md), fill it in, add yourself to [CODEOWNERS](.github/CODEOWNERS) and open a pull request. A GitHub Actions check confirms the entry is complete, the links work and this table is up to date.
+
+---
+
+<div align="center">
+
+[Security](SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [License](LICENSE)
+
+Resources are owned and licensed by their own repositories. Some are unofficial samples, not official Microsoft products. Each entry says so where it applies.
+
+</div>
