@@ -37,6 +37,10 @@ Edit the file, set `last_reviewed` to today's date and open a pull request. If t
 
 Maintainers should review their entries at least once a year. The check warns when `last_reviewed` is more than 365 days old.
 
+## Add a group
+
+A group is a heading in the README under a category, with its entries listed beneath it. To add one, add a block to [`.github/catalog-groups.json`](.github/catalog-groups.json) with its `category` and a one-line `description`, then set `group` in the entries that belong to it. Groups with no entries aren't shown.
+
 ## Suggest a resource
 
 If you don't own the resource, open a "Suggest a new resource" issue. A maintainer will find an owner and help with the entry.
@@ -50,6 +54,7 @@ Every entry has the same fields. The details go in the block at the top of the f
 | Name | `name` | Also the page title. |
 | What it does | `## What it does` | One or two plain sentences. |
 | Category | `category` | Assess, Build or Operate. Must match the folder. |
+| Group (optional) | `group` | Lists the entry under a group, such as AI Accelerators. Must be a name in [`.github/catalog-groups.json`](.github/catalog-groups.json) and belong to the same category. |
 | When to use it | `## When to use it` | A typical scenario and what the team gets. |
 | Prerequisites | `## Prerequisites` | Access, tooling and Azure services. |
 | Maturity | `maturity` | Prototype, Field-tested or Production-ready. |

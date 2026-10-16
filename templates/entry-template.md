@@ -4,6 +4,7 @@
 # Keep every key. If you don't know a value yet, write [TODO: confirm] and say who can confirm it.
 name: Entry name                      # The name people know the resource by.
 category: Assess                      # Assess, Build or Operate. Must match the folder.
+# group: AI Accelerators              # Optional. Uncomment to list this entry under a group. Must be a name in .github/catalog-groups.json.
 maturity: Prototype                   # Prototype, Field-tested or Production-ready. See the README for definitions.
 maintainer_name: Full Name            # The person who keeps this entry current.
 maintainer_alias: alias               # Their GitHub handle, without the @. Must also be in .github/CODEOWNERS.
