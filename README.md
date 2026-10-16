@@ -59,12 +59,28 @@ Not sure where you fit? Open an issue and describe your situation.
 ## 📚 All resources
 
 <!-- catalog-table:start -->
-| Name | Category | Maturity | Maintainer | Link |
-|---|---|---|---|---|
-| [FinOps Multitool TUI](catalog/assess/finops-multitool-tui.md) | Assess | Prototype | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/FinOps-Multitool-TUI) |
-| [Health check](catalog/assess/health-check.md) | Assess | [TODO: confirm] | [TODO: confirm] | [TODO: confirm] |
-| [Foundry Agent Accelerator](catalog/build/foundry-agent-accelerator.md) | Build | Prototype | Michael Rechani (@michael-rechani) | [Repository](https://github.com/michael-rechani/foundry-agent-accelerator) |
-| [Azure Resource Tagger](catalog/operate/azure-resource-tagger.md) | Operate | Field-tested | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/AzureResourceTagger) |
+### 🔍 Assess
+
+| Name | Maturity | Maintainer | Link |
+|---|---|---|---|
+| [FinOps Multitool TUI](catalog/assess/finops-multitool-tui.md) | Prototype | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/FinOps-Multitool-TUI) |
+| [Health check](catalog/assess/health-check.md) | [TODO: confirm] | [TODO: confirm] | [TODO: confirm] |
+
+### 🛠️ Build
+
+#### AI Accelerators
+
+Starting points for AI solutions on Azure, including those built on Microsoft Foundry.
+
+| Name | Maturity | Maintainer | Link |
+|---|---|---|---|
+| [Foundry Agent Accelerator](catalog/build/foundry-agent-accelerator.md) | Prototype | Michael Rechani (@michael-rechani) | [Repository](https://github.com/michael-rechani/foundry-agent-accelerator) |
+
+### 📈 Operate
+
+| Name | Maturity | Maintainer | Link |
+|---|---|---|---|
+| [Azure Resource Tagger](catalog/operate/azure-resource-tagger.md) | Field-tested | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/AzureResourceTagger) |
 <!-- catalog-table:end -->
 
 Details for maturity, maintainer and link are added as each entry is confirmed.

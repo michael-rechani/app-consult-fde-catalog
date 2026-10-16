@@ -13,6 +13,7 @@ Standard library only.
 """
 import argparse
 import datetime as dt
+import json
 import os
 import re
 import sys
@@ -24,7 +25,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 CATEGORIES = {"assess": "Assess", "build": "Build", "operate": "Operate"}
 MATURITY = ["Prototype", "Field-tested", "Production-ready"]
+CATEGORY_ICONS = {"Assess": "🔍", "Build": "🛠️", "Operate": "📈"}
 KEYS = ["name", "category", "maturity", "maintainer_name", "maintainer_alias", "repo_url", "last_reviewed"]
+OPTIONAL_KEYS = ["group"]
+GROUPS_FILE = ROOT / ".github" / "catalog-groups.json"
 HEADINGS = ["What it does", "When to use it", "Prerequisites", "Limits"]
 SUBFIELDS = {
     "When to use it": ["Scenario", "What you get"],
@@ -122,7 +126,23 @@ def codeowners_patterns():
     return pats
 
 
-def check_entry(path, owners):
+def load_groups():
+    if not GROUPS_FILE.exists():
+        return {}
+    try:
+        data = json.loads(GROUPS_FILE.read_text(encoding="utf-8"))
+    except ValueError as e:
+        report("error", rel(GROUPS_FILE), f"not valid JSON: {e}")
+        return {}
+    for name, g in data.items():
+        if g.get("category") not in CATEGORIES.values():
+            report("error", rel(GROUPS_FILE), f"group '{name}' needs a category of: {', '.join(CATEGORIES.values())}")
+        if not g.get("description"):
+            report("error", rel(GROUPS_FILE), f"group '{name}' needs a description")
+    return data
+
+
+def check_entry(path, owners, groups):
     r = rel(path)
     text = path.read_text(encoding="utf-8")
     fm, body = parse_front_matter(text)
@@ -134,8 +154,15 @@ def check_entry(path, owners):
     for k in KEYS:
         if not fm.get(k):
             report("error", r, f"missing or empty field: {k}")
-    if any(k not in KEYS for k in fm):
-        report("error", r, "unknown field(s): " + ", ".join(k for k in fm if k not in KEYS))
+    if any(k not in KEYS + OPTIONAL_KEYS for k in fm):
+        report("error", r, "unknown field(s): " + ", ".join(k for k in fm if k not in KEYS + OPTIONAL_KEYS))
+
+    group = fm.get("group", "")
+    if group and not is_placeholder(group):
+        if group not in groups:
+            report("error", r, f"unknown group '{group}'. Add it to .github/catalog-groups.json or use one of: {', '.join(groups) or 'none defined'}")
+        elif fm.get("category") and groups[group].get("category") != fm["category"]:
+            report("error", r, f"group '{group}' belongs to {groups[group].get('category')}, but this entry's category is {fm['category']}")
 
     folder = path.parent.name
     if fm.get("category") and fm["category"] != CATEGORIES.get(folder):
@@ -223,17 +250,39 @@ def table_row(fm, path):
     link = url if is_placeholder(url) else f"[Repository]({url})"
     alias = fm["maintainer_alias"]
     who = fm["maintainer_name"] if is_placeholder(alias) else f"{fm['maintainer_name']} (@{alias})"
-    return f"| {name} | {fm['category']} | {fm['maturity']} | {who} | {link} |"
+    return f"| {name} | {fm['maturity']} | {who} | {link} |"
 
 
-def build_table(entries):
-    order = list(CATEGORIES.values())
-    rows = sorted(entries, key=lambda e: (order.index(e[0]["category"]) if e[0]["category"] in order else 99, e[0]["name"].lower()))
-    head = ["| Name | Category | Maturity | Maintainer | Link |", "|---|---|---|---|---|"]
+def entry_table(rows):
+    head = ["| Name | Maturity | Maintainer | Link |", "|---|---|---|---|"]
+    rows = sorted(rows, key=lambda e: e[0]["name"].lower())
     return "\n".join(head + [table_row(fm, p) for fm, p in rows])
 
 
-def check_readme(entries, write):
+def entry_group(fm, groups):
+    g = fm.get("group", "")
+    return g if g in groups else ""
+
+
+def build_table(entries, groups):
+    """Category sections, each with its ungrouped entries first, then one subsection per group."""
+    out = []
+    for cat in CATEGORIES.values():
+        in_cat = [e for e in entries if e[0]["category"] == cat]
+        if not in_cat:
+            continue
+        out.append(f"### {CATEGORY_ICONS[cat]} {cat}\n")
+        loose = [e for e in in_cat if not entry_group(e[0], groups)]
+        if loose:
+            out.append(entry_table(loose) + "\n")
+        for name in sorted(groups, key=str.lower):
+            members = [e for e in in_cat if entry_group(e[0], groups) == name]
+            if members:
+                out.append(f"#### {name}\n\n{groups[name]['description']}\n\n{entry_table(members)}\n")
+    return "\n".join(out).rstrip("\n")
+
+
+def check_readme(entries, groups, write):
     p = ROOT / "README.md"
     r = rel(p)
     text = p.read_text(encoding="utf-8")
@@ -242,7 +291,7 @@ def check_readme(entries, write):
         return
     pre, rest = text.split(TABLE_START, 1)
     current, post = rest.split(TABLE_END, 1)
-    expected = "\n" + build_table(entries) + "\n"
+    expected = "\n" + build_table(entries, groups) + "\n"
     if current.replace("\r\n", "\n") == expected:
         return
     if write:
@@ -325,6 +374,7 @@ def main():
     args = ap.parse_args()
 
     owners = codeowners_patterns()
+    groups = load_groups()
     entries = []
     for folder in CATEGORIES:
         d = ROOT / "catalog" / folder
@@ -334,7 +384,7 @@ def main():
         for f in sorted(d.glob("*.md")):
             if f.name.lower() == "readme.md":
                 continue
-            fm = check_entry(f, owners)
+            fm = check_entry(f, owners, groups)
             if fm and all(fm.get(k) for k in KEYS):
                 entries.append((fm, f))
     names = [e[0]["name"].lower() for e in entries]
@@ -343,7 +393,7 @@ def main():
 
     check_template()
     check_stray_files()
-    check_readme(entries, args.write)
+    check_readme(entries, groups, args.write)
     check_relative_links()
     if args.links:
         check_external_links()
