@@ -7,7 +7,7 @@
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4?logo=microsoftazure&logoColor=white)
 ![Catalog](https://img.shields.io/badge/type-catalog%20only-5C2D91)
 ![Links](https://img.shields.io/badge/content-links%20only-107C10)
-![Entries](https://img.shields.io/badge/entries-3-FFB900)
+![Entries](https://img.shields.io/badge/entries-4-FFB900)
 
 [Browse](#-how-to-browse) · [Find the right resource](#-find-the-right-resource) · [All resources](#-all-resources) · [Maturity levels](#-maturity-levels) · [Contribute](#-contribute)
 
@@ -49,6 +49,7 @@ Every entry uses the same headings: what it does, when to use it, prerequisites 
 | "We're starting a new AI project on Azure and want a working base." | 🛠️ Build |
 | "We need dashboards and alerts for a live solution." | 📈 Operate |
 | "We need budgets, tagging or other cost controls on an ongoing basis." | 📈 Operate |
+| "Our tags are inconsistent and we want to tidy them before enforcing a policy." | 📈 Operate |
 
 Not sure where you fit? Open an issue and describe your situation.
 
@@ -57,9 +58,10 @@ Not sure where you fit? Open an issue and describe your situation.
 <!-- catalog-table:start -->
 | Name | Category | Maturity | Maintainer | Link |
 |---|---|---|---|---|
-| [FinOps tooling](catalog/assess/finops.md) | Assess | [TODO: confirm] | [TODO: confirm] | [TODO: confirm] |
+| [FinOps Multitool TUI](catalog/assess/finops-multitool-tui.md) | Assess | Prototype | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/FinOps-Multitool-TUI) |
 | [Health check](catalog/assess/health-check.md) | Assess | [TODO: confirm] | [TODO: confirm] | [TODO: confirm] |
 | [Foundry Agent Accelerator](catalog/build/foundry-agent-accelerator.md) | Build | Prototype | Michael Rechani (@michael-rechani) | [Repository](https://github.com/michael-rechani/foundry-agent-accelerator) |
+| [Azure Resource Tagger](catalog/operate/azure-resource-tagger.md) | Operate | Field-tested | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/AzureResourceTagger) |
 <!-- catalog-table:end -->
 
 Details for maturity, maintainer and link are added as each entry is confirmed.

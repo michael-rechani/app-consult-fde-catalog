@@ -7,7 +7,8 @@
 # owner here. [TODO: confirm] Replace the commented lines below with real handles.
 #
 # /catalog/assess/health-check.md          @TODO-handle
-# /catalog/assess/finops.md                @TODO-handle
+/catalog/assess/finops-multitool-tui.md @z-larsen
+/catalog/operate/azure-resource-tagger.md @z-larsen
 /catalog/build/foundry-agent-accelerator.md @michael-rechani
 
 # catalog structure, template, contributing guide and automation.
