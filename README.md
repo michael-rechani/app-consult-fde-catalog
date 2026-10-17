@@ -2,25 +2,24 @@
 
 # 🧭 App Consult / FDE Resource Catalog
 
-**Every App Consult / Forward Deployed Engineering resource, one page each, same layout.**
+**The tools and accelerators from App Consult / Forward Deployed Engineering, one page each, all laid out the same way.**
 
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4?logo=microsoftazure&logoColor=white)
 ![Catalog](https://img.shields.io/badge/type-catalog%20only-5C2D91)
 ![Links](https://img.shields.io/badge/content-links%20only-107C10)
-![Entries](https://img.shields.io/badge/entries-4-FFB900)
 
 [Browse](#-how-to-browse) · [Find the right resource](#-find-the-right-resource) · [All resources](#-all-resources) · [Contribute](#-contribute)
 
 </div>
 
 > [!IMPORTANT]
-> **This catalog is not a support commitment.** Nothing here is an official Microsoft product, service or offer, and Microsoft doesn't support, warrant or guarantee any listed resource. Resources are provided as is, under the terms in each resource's own repository. Review and test a resource yourself before you use it, and don't run one in a production environment until you've done so. You are responsible for how you use it.
+> **This catalog is not a support commitment.** Nothing here is an official Microsoft product, service or offer, and Microsoft doesn't support, warrant or guarantee any listed resource. Resources are provided as is, under the terms in each resource's own repository. Please review and test a resource yourself before you use it, and don't run it in production until you have. How you use it is your call and your responsibility.
 
 ## 🚀 About the program
 
-App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Alongside that hands-on work, the program maintains a set of reusable resources: FinOps tooling, AI accelerators, and monitoring and cost governance guidance.
+App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Along the way, the engineers share the reusable tools they've built: FinOps tooling, AI accelerators and Azure tagging tools.
 
-Each resource lives in its own repository. This repository is a catalog. It has no code of its own. It describes each resource in the same way and links to where it lives, so you can see what is available and pick what fits.
+Each resource lives in its own repository. This one is just the catalog, with no code of its own. It describes every resource the same way and links to where it lives, so you can see what's out there and pick what fits.
 
 ```mermaid
 flowchart LR
@@ -32,29 +31,26 @@ flowchart LR
 
 ## 🗂️ How to browse
 
-Resources are grouped by what you are trying to do:
+Resources are grouped by what you're trying to do:
 
 | | Category | You want to | Examples |
 |---|---|---|---|
 | 🔍 | [**Assess**](catalog/assess/README.md) | Understand where a workload stands today | FinOps |
 | 🛠️ | [**Build**](catalog/build/README.md) | Start building a solution | AI accelerators |
-| 📈 | [**Operate**](catalog/operate/README.md) | Run a solution that is already live | Monitoring, cost governance |
+| 📈 | [**Operate**](catalog/operate/README.md) | Run a solution that is already live | Tagging and cost governance |
 
-Every entry uses the same headings: what it does, when to use it, prerequisites and limits. Its details (maturity, maintainer, link, last reviewed date) are at the top of the page.
+Every entry follows the same outline: what it does, when to use it, prerequisites and limits. The quick facts (maturity, maintainer, link and last reviewed date) sit at the top of the page.
 
 ## 🎯 Find the right resource
 
 | If your situation is... | Start with |
 |---|---|
-| "We have a workload running and want to know how healthy it is." | 🔍 Assess |
-| "We want to check a workload against a well-architected style review." | 🔍 Assess |
-| "Our Azure bill is growing and we don't know why." | 🔍 Assess (FinOps) |
+| "Our Azure bill is growing and we don't know why." | 🔍 Assess |
 | "We're starting a new AI project on Azure and want a working base." | 🛠️ Build |
-| "We need dashboards and alerts for a live solution." | 📈 Operate |
-| "We need budgets, tagging or other cost controls on an ongoing basis." | 📈 Operate |
+| "We want to see how hosted agents on Microsoft Foundry work." | 🛠️ Build |
 | "Our tags are inconsistent and we want to tidy them before enforcing a policy." | 📈 Operate |
 
-Not sure where you fit? Open an issue and describe your situation.
+Not sure where you fit? Open an issue and tell us about your situation. We'll point you in the right direction.
 
 ## 📚 All resources
 
@@ -82,17 +78,15 @@ Starting points for AI solutions on Azure, including those built on Microsoft Fo
 | [Azure Resource Tagger](https://github.com/z-larsen/AzureResourceTagger) | Field-tested | Zac Larsen (@z-larsen) | [Details](catalog/operate/azure-resource-tagger.md) |
 <!-- catalog-table:end -->
 
-Details for maturity, maintainer and link are added as each entry is confirmed.
-
 ## 🚫 What this catalog doesn't do
 
-- It doesn't promise outcomes, service levels or support. Each resource is described as it is. Check the resource repository for its own terms.
-- It doesn't say a resource is safe or ready to run in production. That's your decision, after your own review and testing.
+- It doesn't promise outcomes, service levels or support. Each resource is described as it is, and its own repository has the terms.
+- It doesn't tell you a resource is safe or ready for production. That's a decision for you to make after your own review and testing.
 - It doesn't hold code, scripts or customer data. Follow the links for those.
 
 ## 🤝 Contribute
 
-To add a resource, update an entry or suggest something new, see [CONTRIBUTING.md](CONTRIBUTING.md). The short version: copy [the template](templates/entry-template.md), fill it in, add yourself to [CODEOWNERS](.github/CODEOWNERS) and open a pull request. A GitHub Actions check confirms the entry is complete, the links work and this table is up to date.
+Got a resource to add, an entry to update or an idea to suggest? See [CONTRIBUTING.md](CONTRIBUTING.md). The short version: copy [the template](templates/entry-template.md), fill it in, add yourself to [CODEOWNERS](.github/CODEOWNERS) and open a pull request. A GitHub Actions check makes sure the entry is complete, the links work and this table is up to date.
 
 ---
 
