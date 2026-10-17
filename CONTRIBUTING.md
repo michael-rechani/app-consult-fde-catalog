@@ -59,7 +59,7 @@ Every entry has the same fields. The details go in the block at the top of the f
 | Prerequisites | `## Prerequisites` | Access, tooling and Azure services. |
 | Maturity | `maturity` | Prototype, Field-tested or Production-ready. |
 | Maintainer | `maintainer_name`, `maintainer_alias` | Name and GitHub handle. |
-| Link | `repo_url` | Link to the resource repository. |
+| Repository link | `repo_url` | Link to the resource repository. The README table links the name straight to it. |
 | Last reviewed | `last_reviewed` | A date, YYYY-MM-DD. |
 
 Every entry also has a `## Limits` section that says what the resource doesn't cover.

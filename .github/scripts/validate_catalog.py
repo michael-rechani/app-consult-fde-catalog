@@ -245,16 +245,17 @@ def check_template():
 
 
 def table_row(fm, path):
-    name = f"[{fm['name']}]({path.relative_to(ROOT).as_posix()})"
+    page = path.relative_to(ROOT).as_posix()
     url = fm["repo_url"]
-    link = url if is_placeholder(url) else f"[Repository]({url})"
+    name = fm["name"] if is_placeholder(url) else f"[{fm['name']}]({url})"
+    link = f"[Details]({page})"
     alias = fm["maintainer_alias"]
     who = fm["maintainer_name"] if is_placeholder(alias) else f"{fm['maintainer_name']} (@{alias})"
     return f"| {name} | {fm['maturity']} | {who} | {link} |"
 
 
 def entry_table(rows):
-    head = ["| Name | Maturity | Maintainer | Link |", "|---|---|---|---|"]
+    head = ["| Name | Maturity | Maintainer | Details |", "|---|---|---|---|"]
     rows = sorted(rows, key=lambda e: e[0]["name"].lower())
     return "\n".join(head + [table_row(fm, p) for fm, p in rows])
 

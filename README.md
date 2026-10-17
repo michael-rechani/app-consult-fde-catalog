@@ -61,9 +61,9 @@ Not sure where you fit? Open an issue and describe your situation.
 <!-- catalog-table:start -->
 ### 🔍 Assess
 
-| Name | Maturity | Maintainer | Link |
+| Name | Maturity | Maintainer | Details |
 |---|---|---|---|
-| [FinOps Multitool TUI](catalog/assess/finops-multitool-tui.md) | Prototype | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/FinOps-Multitool-TUI) |
+| [FinOps Multitool TUI](https://github.com/z-larsen/FinOps-Multitool-TUI) | Prototype | Zac Larsen (@z-larsen) | [Details](catalog/assess/finops-multitool-tui.md) |
 
 ### 🛠️ Build
 
@@ -71,15 +71,15 @@ Not sure where you fit? Open an issue and describe your situation.
 
 Starting points for AI solutions on Azure, including those built on Microsoft Foundry.
 
-| Name | Maturity | Maintainer | Link |
+| Name | Maturity | Maintainer | Details |
 |---|---|---|---|
-| [Foundry Agent Accelerator](catalog/build/foundry-agent-accelerator.md) | Prototype | Michael Rechani (@michael-rechani) | [Repository](https://github.com/michael-rechani/foundry-agent-accelerator) |
+| [Foundry Agent Accelerator](https://github.com/michael-rechani/foundry-agent-accelerator) | Prototype | Michael Rechani (@michael-rechani) | [Details](catalog/build/foundry-agent-accelerator.md) |
 
 ### 📈 Operate
 
-| Name | Maturity | Maintainer | Link |
+| Name | Maturity | Maintainer | Details |
 |---|---|---|---|
-| [Azure Resource Tagger](catalog/operate/azure-resource-tagger.md) | Field-tested | Zac Larsen (@z-larsen) | [Repository](https://github.com/z-larsen/AzureResourceTagger) |
+| [Azure Resource Tagger](https://github.com/z-larsen/AzureResourceTagger) | Field-tested | Zac Larsen (@z-larsen) | [Details](catalog/operate/azure-resource-tagger.md) |
 <!-- catalog-table:end -->
 
 Details for maturity, maintainer and link are added as each entry is confirmed.
