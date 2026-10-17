@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping keep the catalog accurate. Entries are short Markdown files, so changes are quick to make and review.
+Thanks for helping keep the catalog accurate. Entries are short Markdown files, so changes are quick to make and easy to review.
 
 ## What does not go in this repo
 
@@ -12,7 +12,7 @@ This repo is links only. Never add any of the following, in any file, issue or p
 - Tenant IDs, subscription IDs or other identifiers from a real environment.
 - Internal-only links or references, such as internal sites, file shares, tools or team names.
 
-If you committed something by mistake, tell a maintainer straight away. Don't rely on deleting it in a later commit.
+If you committed something by mistake, don't worry. Tell a maintainer straight away, and don't count on deleting it in a later commit.
 
 ## Add an entry
 
@@ -29,7 +29,7 @@ If you committed something by mistake, tell a maintainer straight away. Don't re
    `--write` updates the summary table in the README. Without it, the script only checks.
 6. Open a pull request. The check runs automatically.
 
-Don't have everything yet? Use `[TODO: confirm]` for unknown details. The check lists placeholders as warnings, and the PR reviewer decides whether the entry is ready to merge.
+Don't have every detail yet? That's fine. Use `[TODO: confirm]` for anything you don't know. The check lists placeholders as warnings, and the reviewer decides whether the entry is ready to merge.
 
 ## Update an entry
 
@@ -43,7 +43,7 @@ A group is a heading in the README under a category, with its entries listed ben
 
 ## Suggest a resource
 
-If you don't own the resource, open a "Suggest a new resource" issue. A maintainer will find an owner and help with the entry.
+If you don't own the resource, open a "Suggest a new resource" issue. A maintainer will help find an owner and get the entry written.
 
 ## Required fields
 
