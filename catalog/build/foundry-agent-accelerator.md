@@ -1,7 +1,6 @@
 ---
 name: Foundry Agent Accelerator
 category: Build
-group: AI Accelerators
 maturity: Prototype
 maintainer_name: Michael Rechani
 maintainer_alias: michael-rechani

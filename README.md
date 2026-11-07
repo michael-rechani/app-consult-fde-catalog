@@ -46,8 +46,7 @@ Every entry follows the same outline: what it does, when to use it, prerequisite
 | If your situation is... | Start with |
 |---|---|
 | "Our Azure bill is growing and we don't know why." | 🔍 [FinOps Multitool TUI](catalog/assess/finops-multitool-tui.md) |
-| "We're starting a new AI project on Azure and want a working base." | 🛠️ [AI Accelerators](catalog/build/README.md#ai-accelerators) |
-| "We want to see how hosted agents on Microsoft Foundry work." | 🛠️ [Foundry Agent Accelerator](catalog/build/foundry-agent-accelerator.md) |
+| "We want to try Microsoft Foundry hosted agents or build an agent from a template." | 🛠️ [Foundry Agent Accelerator](catalog/build/foundry-agent-accelerator.md) |
 | "We want to monitor Foundry agents or Azure OpenAI provisioned deployments." | 📈 [Azure AI Observatory](catalog/operate/azure-ai-observatory.md) |
 | "Our tags are inconsistent and we want to tidy them before enforcing a policy." | 📈 [Azure Resource Tagger](catalog/operate/azure-resource-tagger.md) |
 
@@ -65,10 +64,6 @@ Entries with details still to confirm are marked **Unconfirmed**. Maturity label
 | [FinOps Multitool TUI](https://github.com/z-larsen/FinOps-Multitool-TUI) | Prototype | Zac Larsen (@z-larsen) | [Details](catalog/assess/finops-multitool-tui.md) |
 
 ### 🛠️ Build
-
-#### AI Accelerators
-
-Starting points for AI solutions on Azure, including those built on Microsoft Foundry.
 
 | Name | Maturity | Maintainer | Details |
 |---|---|---|---|
