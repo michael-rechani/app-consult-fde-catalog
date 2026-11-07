@@ -10,6 +10,7 @@
 /catalog/assess/finops-multitool-tui.md @z-larsen
 /catalog/operate/azure-resource-tagger.md @z-larsen
 /catalog/build/foundry-agent-accelerator.md @michael-rechani
+/catalog/operate/azure-ai-observatory.md @michael-rechani
 
 # catalog structure, template, contributing guide and automation.
 # [TODO: confirm] Set this to the GitHub team or person that looks after the catalog.
