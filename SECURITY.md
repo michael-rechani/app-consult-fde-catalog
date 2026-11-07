@@ -2,7 +2,7 @@
 
 ## Report a problem with this catalog
 
-This repository holds links and descriptions only. It has no code that runs in your environment. If you find a security problem in it, such as a link that points somewhere unsafe, or a secret, credential, customer name, tenant ID or internal-only link in any file, report it privately:
+This repository holds resource links and descriptions, plus catalog-maintenance automation. Resource implementations live elsewhere. If you find a security problem here, such as an unsafe link, an automation vulnerability, or a secret, credential, customer name, tenant ID or internal-only link in any file, report it privately:
 
 1. Go to the **Security** tab of this repository.
 2. Select **Report a vulnerability**.
@@ -22,3 +22,5 @@ For a vulnerability in a Microsoft product or service, use the [Microsoft Securi
 - A GitHub Actions workflow with read-only permissions checks every pull request.
 - The check looks for common secret patterns and internal-only links in entries.
 - Actions are pinned to a commit and kept current by Dependabot.
+
+These checks are safeguards, not a complete secret scanner or a way to identify every customer name or sensitive identifier. Review all changed files manually. External-link checks establish reachability only, not the safety or accuracy of the destination.

@@ -3,17 +3,23 @@
 #
 #   /catalog/<category>/<entry-name>.md @<github-handle>
 #
-# Until the program team confirms the maintainers, the seed entries have no
-# owner here. [TODO: confirm] Replace the commented lines below with real handles.
-#
-#
+# Keep exact entry rules after any broader catalog rules. The validator checks
+# that the effective owner includes the entry's maintainer, not just its path.
 /catalog/assess/finops-multitool-tui.md @z-larsen
 /catalog/operate/azure-resource-tagger.md @z-larsen
 /catalog/build/foundry-agent-accelerator.md @michael-rechani
 /catalog/operate/azure-ai-observatory.md @michael-rechani
 
-# catalog structure, template, contributing guide and automation.
-# [TODO: confirm] Set this to the GitHub team or person that looks after the catalog.
-# /templates/  @TODO-handle
-# /.github/    @TODO-handle
-# /README.md   @TODO-handle
+# Shared documentation, category indexes, templates and repository automation.
+/.github/ @michael-rechani
+/templates/ @michael-rechani
+/README.md @michael-rechani
+/CONTRIBUTING.md @michael-rechani
+/SECURITY.md @michael-rechani
+/CODE_OF_CONDUCT.md @michael-rechani
+/LICENSE @michael-rechani
+/.gitattributes @michael-rechani
+/.gitignore @michael-rechani
+/catalog/assess/README.md @michael-rechani
+/catalog/build/README.md @michael-rechani
+/catalog/operate/README.md @michael-rechani
