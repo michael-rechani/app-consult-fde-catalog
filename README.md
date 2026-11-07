@@ -50,7 +50,7 @@ Every entry follows the same outline: what it does, when to use it, prerequisite
 | "We want to monitor Foundry agents or Azure OpenAI provisioned deployments." | 📈 [Azure AI Observatory](catalog/operate/azure-ai-observatory.md) |
 | "Our tags are inconsistent and we want to tidy them before enforcing a policy." | 📈 [Azure Resource Tagger](catalog/operate/azure-resource-tagger.md) |
 
-Not sure where you fit? [Suggest a resource](https://github.com/michael-rechani/app-consult-fde-catalog/issues/new?template=suggest-resource.yml) or describe your situation without customer details.
+[Suggest a resource](https://github.com/michael-rechani/app-consult-fde-catalog/issues/new?template=suggest-resource.yml) or [report a problem with an entry](https://github.com/michael-rechani/app-consult-fde-catalog/issues/new?template=report-entry-problem.yml).
 
 ## 📚 All resources
 
@@ -59,22 +59,22 @@ Entries with details still to confirm are marked **Unconfirmed**. Maturity label
 <!-- catalog-table:start -->
 ### 🔍 Assess
 
-| Name | Maturity | Maintainer | Details |
+| Resource repository | Maturity | Maintainer | Catalog entry |
 |---|---|---|---|
-| [FinOps Multitool TUI](https://github.com/z-larsen/FinOps-Multitool-TUI) | Prototype | Zac Larsen (@z-larsen) | [Details](catalog/assess/finops-multitool-tui.md) |
+| [FinOps Multitool TUI](https://github.com/z-larsen/FinOps-Multitool-TUI) | Prototype | Zac Larsen (@z-larsen) | [Catalog entry](catalog/assess/finops-multitool-tui.md) |
 
 ### 🛠️ Build
 
-| Name | Maturity | Maintainer | Details |
+| Resource repository | Maturity | Maintainer | Catalog entry |
 |---|---|---|---|
-| [Foundry Agent Accelerator](https://github.com/michael-rechani/foundry-agent-accelerator) | Prototype | Michael Rechani (@michael-rechani) | [Details](catalog/build/foundry-agent-accelerator.md) |
+| [Foundry Agent Accelerator](https://github.com/michael-rechani/foundry-agent-accelerator) | Prototype | Michael Rechani (@michael-rechani) | [Catalog entry](catalog/build/foundry-agent-accelerator.md) |
 
 ### 📈 Operate
 
-| Name | Maturity | Maintainer | Details |
+| Resource repository | Maturity | Maintainer | Catalog entry |
 |---|---|---|---|
-| [Azure AI Observatory](https://github.com/michael-rechani/azure-ai-observability) | Prototype | Michael Rechani (@michael-rechani) | [Details](catalog/operate/azure-ai-observatory.md) |
-| [Azure Resource Tagger](https://github.com/z-larsen/AzureResourceTagger) | Field-tested | Zac Larsen (@z-larsen) | [Details](catalog/operate/azure-resource-tagger.md) |
+| [Azure AI Observatory](https://github.com/michael-rechani/azure-ai-observability) | Prototype | Michael Rechani (@michael-rechani) | [Catalog entry](catalog/operate/azure-ai-observatory.md) |
+| [Azure Resource Tagger](https://github.com/z-larsen/AzureResourceTagger) | Field-tested | Zac Larsen (@z-larsen) | [Catalog entry](catalog/operate/azure-resource-tagger.md) |
 <!-- catalog-table:end -->
 
 ## 🚫 What this catalog doesn't do

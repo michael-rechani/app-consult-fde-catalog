@@ -1,7 +1,7 @@
 name: Report a problem with an entry
 description: An entry is wrong, out of date or has a broken link.
 title: "Entry: "
-labels: ["entry-fix"]
+labels: ["documentation"]
 body:
   - type: markdown
     attributes:
