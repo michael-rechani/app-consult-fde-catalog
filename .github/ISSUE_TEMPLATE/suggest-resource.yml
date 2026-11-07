@@ -1,12 +1,12 @@
 name: Suggest a new resource
 description: Propose a resource for the catalog.
 title: "Suggest: "
-labels: ["new-resource"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion. This repo is links only, so don't paste code, customer data, secrets, customer names, tenant or subscription IDs, or internal-only links.
+        Thanks for the suggestion. Resource content is links and descriptions only. Don't paste resource code or configuration, customer data or names, secrets, tenant or subscription IDs, other real-environment identifiers, or internal-only links.
   - type: input
     id: name
     attributes:
@@ -62,5 +62,5 @@ body:
     attributes:
       label: Before you submit
       options:
-        - label: This issue has no secrets, customer names, tenant IDs or internal-only links.
+        - label: This issue has no resource code or configuration, customer data or names, secrets, tenant or subscription IDs, other real-environment identifiers, or internal-only links.
           required: true

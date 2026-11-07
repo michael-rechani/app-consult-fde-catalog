@@ -358,7 +358,7 @@ def table_row(fm, path, base=None):
     name = escape_text(fm["name"])
     if not is_placeholder(url):
         name = f"[{name}]({urllib.parse.quote(url, safe=':/?#@!$&*+,;=-._~%')})"
-    link = f"[Details]({page})"
+    link = f"[Catalog entry]({page})"
     alias = fm["maintainer_alias"]
     who = escape_text(fm["maintainer_name"])
     if not is_placeholder(alias):
@@ -370,7 +370,7 @@ def table_row(fm, path, base=None):
 
 
 def entry_table(rows, base=None):
-    head = ["| Name | Maturity | Maintainer | Details |", "|---|---|---|---|"]
+    head = ["| Resource repository | Maturity | Maintainer | Catalog entry |", "|---|---|---|---|"]
     rows = sorted(rows, key=lambda e: e[0]["name"].lower())
     return "\n".join(head + [table_row(fm, p, base) for fm, p in rows])
 

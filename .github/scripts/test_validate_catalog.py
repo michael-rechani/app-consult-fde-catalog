@@ -324,11 +324,12 @@ extra: "quote: \\" and slash \\\\"
         entries = [(first, paths[0]), (second, paths[1])]
         table = catalog.build_table(entries, groups, "build")
         self.assertIn("## AI Accelerators", table)
-        self.assertIn("[Details](alpha-tool.md)", table)
+        self.assertIn("| Resource repository | Maturity | Maintainer | Catalog entry |", table)
+        self.assertIn("[Catalog entry](alpha-tool.md)", table)
         self.assertLess(table.index("Alpha tool"), table.index("Zulu tool"))
         self.assertNotIn("Empty", table)
         self.assertNotIn("###", table)
-        self.assertIn("[Details](catalog/build/alpha-tool.md)", catalog.build_table(entries, groups))
+        self.assertIn("[Catalog entry](catalog/build/alpha-tool.md)", catalog.build_table(entries, groups))
 
     def test_generated_text_escapes_table_and_link_characters(self):
         fm = catalog.parse_front_matter(ENTRY)[0]
@@ -337,6 +338,24 @@ extra: "quote: \\" and slash \\\\"
         table = catalog.table_row(fm, self.path)
         self.assertIn(r"A \| \[tool\]", table)
         self.assertIn("tool%28v1%29", table)
+
+    def test_generated_links_with_placeholder_and_encoded_paths(self):
+        fm = catalog.parse_front_matter(ENTRY)[0]
+        fm["name"] = "A | [tool]"
+        fm["repo_url"] = "https://example.com/tool(v1)"
+        path = self.root / "catalog" / "assess" / "tool (v1).md"
+        root_table = catalog.build_table([(fm, path)], {})
+        category_table = catalog.build_table([(fm, path)], {}, "assess")
+        for table in (root_table, category_table):
+            self.assertIn(r"[A \| \[tool\]](https://example.com/tool%28v1%29)", table)
+        self.assertIn("[Catalog entry](catalog/assess/tool%20%28v1%29.md)", root_table)
+        self.assertIn("[Catalog entry](tool%20%28v1%29.md)", category_table)
+        fm["repo_url"] = "[TODO: confirm]"
+        for table in (catalog.build_table([(fm, path)], {}),
+                      catalog.build_table([(fm, path)], {}, "assess")):
+            self.assertIn(r"| A \| \[tool\] | **Unconfirmed** - Prototype |", table)
+            self.assertNotIn("https://example.com", table)
+            self.assertIn("[Catalog entry](", table)
 
     def test_main_passes_without_network_and_resets_diagnostics(self):
         catalog.errors.append(("old", "old error"))
@@ -363,7 +382,7 @@ extra: "quote: \\" and slash \\\\"
         for path in self.indexes:
             self.assertIn("Keep this prose.", path.read_text(encoding="utf-8"))
         self.assertIn("Field-tested", self.indexes[0].read_text(encoding="utf-8"))
-        self.assertIn("[Details](example-tool.md)", self.indexes[1].read_text(encoding="utf-8"))
+        self.assertIn("[Catalog entry](example-tool.md)", self.indexes[1].read_text(encoding="utf-8"))
         self.assertIn("No entries yet.", self.indexes[2].read_text(encoding="utf-8"))
         before = {path: path.read_bytes() for path in self.indexes}
         self.assertEqual(self.run_main("--write")[0], 0)

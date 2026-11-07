@@ -47,7 +47,7 @@ A group is a heading in the README under a category, also shown in that category
 
 ## Suggest a resource
 
-If you don't own the resource, open a "Suggest a new resource" issue. A maintainer will help find an owner and get the entry written.
+If you don't own the resource, open a [suggestion](https://github.com/michael-rechani/app-consult-fde-catalog/issues/new?template=suggest-resource.yml). A maintainer will help find an owner and get the entry written. To flag an existing entry, [report a problem](https://github.com/michael-rechani/app-consult-fde-catalog/issues/new?template=report-entry-problem.yml).
 
 ## Required fields
 
@@ -63,7 +63,7 @@ Every entry has the same fields. The details go in the block at the top of the f
 | Prerequisites | `## Prerequisites` | Access, tooling and Azure services. |
 | Maturity | `maturity` | Prototype, Field-tested or Production-ready. |
 | Maintainer | `maintainer_name`, `maintainer_alias` | Name and GitHub handle. |
-| Repository link | `repo_url` | Link to the resource repository. The README table links the name straight to it. |
+| Repository link | `repo_url` | Link to the resource repository. In generated indexes, the resource name links to that repository; **Catalog entry** links to its catalog page. If the repository URL is unconfirmed, the name is not linked. |
 | Last reviewed | `last_reviewed` | A date, YYYY-MM-DD. |
 
 Every entry also has a `## Limits` section that says what the resource doesn't cover.
