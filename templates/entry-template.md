@@ -2,14 +2,15 @@
 # Copy this file to catalog/<category>/<entry-name>.md and fill it in.
 # <category> is one of: assess, build, operate. Use lowercase kebab-case for <entry-name>.
 # Keep every key. If you don't know a value yet, write [TODO: confirm] and say who can confirm it.
+# Use unindented key: value lines and single-line strings, not general YAML.
 name: Entry name                      # The name people know the resource by.
 category: Assess                      # Assess, Build or Operate. Must match the folder.
 # group: AI Accelerators              # Optional. Uncomment to list this entry under a group. Must be a name in .github/catalog-groups.json.
 maturity: Prototype                   # Prototype, Field-tested or Production-ready. See the maturity definitions in CONTRIBUTING.md.
 maintainer_name: Full Name            # The person who keeps this entry current.
 maintainer_alias: alias               # Their GitHub handle, without the @. Must also be in .github/CODEOWNERS.
-repo_url: https://github.com/ORG/REPO # Public link to the resource repository. Links only, no internal URLs.
-last_reviewed: 2026-01-31             # YYYY-MM-DD. Update it every time the maintainer checks the entry.
+repo_url: "[TODO: confirm]"           # Public https:// link to the actual resource repository, not an example URL.
+last_reviewed: "[TODO: confirm]"      # YYYY-MM-DD, when the maintainer actually checks the entry.
 ---
 
 # Entry name
@@ -19,7 +20,8 @@ last_reviewed: 2026-01-31             # YYYY-MM-DD. Update it every time the mai
 ## What it does
 
 <!-- One or two plain sentences. Say what the resource does, not what it could achieve.
-     Don't promise outcomes, SLAs or support. Don't write "supported", "guaranteed" or "ready for production". -->
+     Don't promise outcomes, service-level agreements or support.
+     Don't write "supported", "guaranteed" or "ready for production". -->
 
 ## When to use it
 

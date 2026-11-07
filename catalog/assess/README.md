@@ -2,4 +2,10 @@
 
 Resources for understanding where a workload stands today: FinOps tools.
 
-The entries are listed in the [summary table](../../README.md#-all-resources). To add one, see [CONTRIBUTING.md](../../CONTRIBUTING.md).
+<!-- catalog-table:start -->
+| Name | Maturity | Maintainer | Details |
+|---|---|---|---|
+| [FinOps Multitool TUI](https://github.com/z-larsen/FinOps-Multitool-TUI) | Prototype | Zac Larsen (@z-larsen) | [Details](finops-multitool-tui.md) |
+<!-- catalog-table:end -->
+
+[All resources](../../README.md#-all-resources) · [Contribute](../../CONTRIBUTING.md)

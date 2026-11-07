@@ -12,7 +12,7 @@ last_reviewed: 2026-10-16
 
 ## What it does
 
-A terminal-based tool that runs read-only FinOps scans against Azure subscriptions. It brings cost drivers, resource inventory and optimization findings into a local report.
+A terminal user interface (TUI) that runs read-only FinOps (cloud financial operations) scans against Azure subscriptions. It brings cost drivers, resource inventory and optimization findings into a local report.
 
 ## When to use it
 

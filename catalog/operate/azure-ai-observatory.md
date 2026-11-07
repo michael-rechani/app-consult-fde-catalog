@@ -12,7 +12,7 @@ last_reviewed: 2026-11-06
 
 ## What it does
 
-Provides Azure Managed Grafana dashboards for Microsoft Foundry agents and Azure OpenAI provisioned throughput (PTU) deployments, with optional cost visibility. Terraform or Bicep deploys the monitoring resources and dashboards.
+Provides Azure Managed Grafana dashboards for Microsoft Foundry agents and Azure OpenAI deployments using provisioned throughput units (PTUs), with optional cost visibility. Terraform or Bicep deploys the monitoring resources and dashboards.
 
 ## When to use it
 
@@ -22,7 +22,7 @@ Provides Azure Managed Grafana dashboards for Microsoft Foundry agents and Azure
 ## Prerequisites
 
 - **Access:** Permission to create Azure resources and assign roles, a Microsoft Entra object ID for a Grafana administrator, and an alert email address.
-- **Tooling:** Azure CLI with Bicep and PowerShell 7, or Terraform and Azure CLI. The optional Terraform cost collector also needs PowerShell 7.
+- **Tooling:** Azure command-line interface (CLI) with Bicep and PowerShell 7, or Terraform and Azure CLI. The optional Terraform cost collector also needs PowerShell 7.
 - **Azure services:** Existing Foundry or Azure OpenAI accounts; PTU alerts need existing provisioned deployments. The deployment creates Azure Managed Grafana, Application Insights and Log Analytics resources.
 
 ## Limits
