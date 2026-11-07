@@ -17,7 +17,7 @@
 
 ## 🚀 About the program
 
-App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Along the way, the engineers share the reusable tools they've built: FinOps tooling, AI accelerators and Azure tagging tools.
+App Consult / FDE pairs Microsoft engineers with customer teams to assess, build and operate solutions on Azure. Along the way, the engineers share the reusable tools they've built: FinOps tooling, AI accelerators, monitoring and Azure tagging tools.
 
 Each resource lives in its own repository. This one is just the catalog, with no code of its own. It describes every resource the same way and links to where it lives, so you can see what's out there and pick what fits.
 
@@ -37,7 +37,7 @@ Resources are grouped by what you're trying to do:
 |---|---|---|---|
 | 🔍 | [**Assess**](catalog/assess/README.md) | Understand where a workload stands today | FinOps |
 | 🛠️ | [**Build**](catalog/build/README.md) | Start building a solution | AI accelerators |
-| 📈 | [**Operate**](catalog/operate/README.md) | Run a solution that is already live | Tagging and cost governance |
+| 📈 | [**Operate**](catalog/operate/README.md) | Run a solution that is already live | Monitoring, tagging and cost governance |
 
 Every entry follows the same outline: what it does, when to use it, prerequisites and limits. The quick facts (maturity, maintainer, link and last reviewed date) sit at the top of the page.
 
@@ -48,6 +48,7 @@ Every entry follows the same outline: what it does, when to use it, prerequisite
 | "Our Azure bill is growing and we don't know why." | 🔍 Assess |
 | "We're starting a new AI project on Azure and want a working base." | 🛠️ Build |
 | "We want to see how hosted agents on Microsoft Foundry work." | 🛠️ Build |
+| "We want to monitor Foundry agents or Azure OpenAI provisioned deployments." | 📈 [Azure AI Observatory](catalog/operate/azure-ai-observatory.md) |
 | "Our tags are inconsistent and we want to tidy them before enforcing a policy." | 📈 Operate |
 
 Not sure where you fit? Open an issue and tell us about your situation. We'll point you in the right direction.
@@ -75,6 +76,7 @@ Starting points for AI solutions on Azure, including those built on Microsoft Fo
 
 | Name | Maturity | Maintainer | Details |
 |---|---|---|---|
+| [Azure AI Observatory](https://github.com/michael-rechani/azure-ai-observability) | Prototype | Michael Rechani (@michael-rechani) | [Details](catalog/operate/azure-ai-observatory.md) |
 | [Azure Resource Tagger](https://github.com/z-larsen/AzureResourceTagger) | Field-tested | Zac Larsen (@z-larsen) | [Details](catalog/operate/azure-resource-tagger.md) |
 <!-- catalog-table:end -->
 
